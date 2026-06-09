@@ -1,0 +1,659 @@
+:root{
+    --cream:#EFD9C6;
+    --soft:#EEAD9F;
+    --peach:#EB8F78;
+    --salmon:#EB7865;
+    --orange:#DC4C36;
+}
+
+body{
+    background:var(--cream);
+    font-family:'Segoe UI',sans-serif;
+}
+
+.container{
+    max-width:1250px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:linear-gradient(
+        90deg,
+        var(--orange),
+        var(--salmon)
+    ) !important;
+    padding:14px 0;
+}
+
+.navbar-brand{
+    font-size:32px;
+    font-weight:800;
+    color:white !important;
+}
+
+.navbar-nav{
+    gap:10px;
+}
+
+.nav-link{
+    display:flex;
+    align-items:center;
+    color:white !important;
+    font-weight:600;
+    padding:10px 18px !important;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.nav-link i{
+    margin-right:8px;
+}
+
+.nav-link:hover{
+    background:rgba(255,255,255,.15);
+    transform:translateY(-2px);
+}
+
+.nav-link.active{
+    background:rgba(255,255,255,.15);
+}
+
+/* ================= BUTTON ================= */
+
+.btn-frozeria,
+.btn-danger{
+    background:var(--orange) !important;
+    border:none !important;
+    color:white !important;
+    border-radius:14px;
+    padding:12px 24px;
+    font-weight:600;
+}
+
+.btn-frozeria:hover,
+.btn-danger:hover{
+    background:#c83f2c !important;
+}
+
+/* ================= HEADER ================= */
+
+.dashboard-title{
+    font-size:54px;
+    font-weight:800;
+    color:var(--orange);
+    margin-bottom:6px;
+}
+
+.dashboard-subtitle{
+    font-size:18px;
+    color:#666;
+    margin-bottom:0;
+}
+
+/* ================= CARD ================= */
+
+.dashboard-cards{
+    margin-top:-5px;
+}
+
+.frozeria-card{
+    border:none;
+    border-radius:24px;
+    min-height:140px;
+    display:flex;
+    align-items:center;
+    padding:24px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.frozeria-card:hover{
+    transform:translateY(-5px);
+}
+
+.card-barang{
+    background:#DC4C36;
+    color:white;
+}
+
+.card-kategori{
+    background:#EB7865;
+    color:white;
+}
+
+.card-menipis{
+    background:#EB8F78;
+    color:white;
+}
+
+.card-habis{
+    background:#EEAD9F;
+    color:white;
+}
+
+.card-icon{
+    width:82px;
+    height:82px;
+    border-radius:50%;
+    background:rgba(255,255,255,.20);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:20px;
+    flex-shrink:0;
+}
+
+.card-icon i{
+    font-size:42px;
+    color:white;
+}
+
+.card-habis .card-icon i{
+    color:white;
+}
+
+.stat-number{
+    font-size:50px;
+    font-weight:700;
+    line-height:1;
+}
+
+/* ================= CONTENT ================= */
+
+.main-box{
+    background:#fffaf7;
+    border-radius:24px;
+    padding:24px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.form-control,
+.form-select{
+    height:52px;
+    border-radius:14px;
+}
+
+.table{
+    margin-top:15px;
+}
+
+.table thead{
+    background:var(--orange);
+    color:white;
+}
+
+.table thead th{
+    border:none;
+    padding:16px;
+}
+
+.table tbody td{
+    padding:18px 16px;
+    vertical-align:middle;
+}
+
+/* ================= BADGE ================= */
+
+.badge-frozeria{
+    background:#fce1da;
+    color:var(--orange);
+    border-radius:30px;
+    padding:7px 12px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.preview-wrapper{
+    width:320px;
+    height:220px;
+    background:#f8f8f8;
+    border:1px solid #ddd;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+#previewFoto{
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+
+.btn-cancel{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    padding:12px 22px;
+
+    background:#f3f4f6;
+    color:#4b5563;
+
+    border:none;
+    border-radius:14px;
+
+    font-weight:600;
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.btn-cancel:hover{
+    background:#e5e7eb;
+    color:#111827;
+}
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.action-buttons form{
+    margin:0;
+}
+
+#success-alert{
+    border:none;
+    border-radius:16px;
+    padding:16px 20px;
+    background:#d1fae5;
+    color:#065f46;
+    font-weight:600;
+}
+
+/* ================= BARANG ================= */
+
+.btn-back{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    border-radius:14px;
+    background:#fff;
+    border:1px solid #d6d6d6;
+    color:#444;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-back:hover{
+    background:#f5f5f5;
+    color:var(--orange);
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
+}
+
+.btn-back-modern{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#fff;
+    color:#555;
+    border:none;
+    padding:12px 22px;
+    border-radius:14px;
+    font-weight:600;
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.btn-back-modern:hover{
+    background:#DC4C36;
+    color:#fff;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(220,76,54,.25);
+}
+
+.detail-image{
+    background:#fff;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.detail-card{
+    background:#fff;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+    height:100%;
+}
+
+.detail-card small{
+    display:block;
+    color:#777;
+    margin-bottom:8px;
+}
+
+.detail-card h5{
+    margin:0;
+    font-weight:700;
+}
+
+/* ================= UPLOAD FOTO ================= */
+
+.upload-box{
+    border:2px dashed #d9d9d9;
+    border-radius:20px;
+    padding:20px;
+    background:#fff;
+    transition:.3s;
+}
+
+.upload-box:hover{
+    border-color:#DC4C36;
+    background:#fff8f6;
+}
+
+#previewFoto{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:16px;
+    border:1px solid #eee;
+    background:#f8f8f8;
+    display:block;
+    margin:auto;
+}
+
+.form-control[type="file"]{
+    height:auto !important;
+    padding:10px;
+    border-radius:14px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-cancel{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    border-radius:14px;
+    border:2px solid #d9d9d9;
+    background:#fff;
+    color:#555;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-cancel:hover{
+    border-color:#DC4C36;
+    color:#DC4C36;
+    background:#fff8f6;
+    transform:translateY(-2px);
+}
+
+/* ================= FORM ================= */
+
+textarea.form-control{
+    resize:none;
+    padding:12px;
+    border-radius:14px;
+}
+
+.form-label{
+    font-weight:600;
+    color:#444;
+}
+
+::placeholder{
+    color:#9ca3af !important;
+    opacity:1;
+}
+
+.btn-action{
+    width:42px;
+    height:42px;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+}
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.action-buttons form{
+    margin:0;
+}
+
+.btn-action{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+}
+
+.btn-action i{
+    font-size:18px;
+}
+
+
+/* ================= bantuan ================= */
+.help-container{
+padding:20px;
+}
+
+.help-container{
+    padding:20px;
+}
+
+/* HERO */
+.help-hero{
+    background:linear-gradient(
+        135deg,
+        #E65135,
+        #FF8A65
+    );
+
+    color:white;
+    text-align:center;
+
+    padding:20px 25px;
+
+    border-radius:25px;
+
+    width:100%;
+    margin-bottom:35px;
+
+    box-shadow:0 10px 25px rgba(230,81,53,.15);
+}
+
+.hero-icon{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+.help-hero h1{
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.help-hero p{
+    font-size:14px;
+    max-width:500px;
+    margin:auto;
+}
+
+/* FITUR */
+.feature-card{
+    background:white;
+    border-radius:25px;
+    padding:35px 25px;
+    text-align:center;
+    height:100%;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+}
+
+.feature-card i{
+    font-size:50px;
+    color:#E65135;
+}
+
+.feature-card h4{
+    color:#E65135;
+    font-weight:700;
+    margin:18px 0 15px;
+}
+
+.feature-card p{
+    margin:0;
+    line-height:1.8;
+}
+
+/* TENTANG */
+.about-card{
+    background:white;
+    margin-top:40px;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.about-card h2{
+    color:#E65135;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.about-card p{
+    margin:0;
+    line-height:1.9;
+}
+
+/* PROFIL */
+.developer-card{
+    background:#fff;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    max-width:420px;
+
+    margin:30px auto 0;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.developer-photo{
+    width:70px;
+    height:70px;
+
+    object-fit:cover;
+    border-radius:50%;
+
+    border:3px solid #E65135;
+
+    margin-bottom:8px;
+}
+
+.developer-card h2{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:2px;
+}
+
+.developer-role{
+    display:block;
+
+    color:#E65135;
+
+    font-size:13px;
+    font-weight:600;
+
+    margin-bottom:12px;
+}
+
+.developer-info{
+    max-width:300px;
+    margin:auto;
+
+    text-align:left;
+}
+
+.developer-info div{
+    display:flex;
+    align-items:center;
+
+    padding:6px 0;
+
+    border-bottom:1px solid #f2f2f2;
+
+    font-size:12px;
+}
+
+.developer-info strong{
+    min-width:70px;
+}
+
+.developer-info i{
+    color:#E65135;
+
+    width:18px;
+    margin-right:8px;
+
+    font-size:12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .dashboard-title{
+        font-size:38px;
+    }
+
+    .frozeria-card{
+        margin-bottom:15px;
+    }
+
+    .card-icon{
+        width:60px;
+        height:60px;
+    }
+
+    .card-icon i{
+        font-size:28px;
+    }
+
+    .main-box{
+        max-width:100%;
+        margin:auto;
+    }
+
+    #previewFoto{
+        width:180px;
+        height:180px;
+    }
+}
+
+/* BANTUAN */
